@@ -1,121 +1,125 @@
 package com.example.chatrobot;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 import android.app.Activity;
 import android.os.Bundle;
+
+import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
-import android.view.View.OnClickListener;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class MainActivity extends Activity implements HttpGetDataListener,
-		OnClickListener {
+import com.example.music.R;
+import com.kymjs.rxvolley.RxVolley;
+import com.kymjs.rxvolley.client.HttpCallback;
 
-	private HttpData httpData;
-	private List<ListData> lists;
-	private ListView lv;
-	private EditText sendtext;
-	private Button send_btn;
-	private String content_str;
-	private TextAdapter adapter;
-	private String[] welcome_array;
-	// 做比对时间；老时间
-	private double currentTime = 0, oldTime = 0;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends Activity implements View.OnClickListener{
+
+	private ListView lv_chat_list;
+	private EditText ed_send;
+	private Button btn_send;
+	private List<ChatData> mList = new ArrayList<>();
+	private ChatListAdapter adapter;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		//初始化控件
 		initView();
+
 	}
 
 	private void initView() {
-		lv = (ListView) findViewById(R.id.lv);
-		sendtext = (EditText) findViewById(R.id.sendText);
-		send_btn = (Button) findViewById(R.id.send_btn);
-		lists = new ArrayList<ListData>();
-		send_btn.setOnClickListener(this);
-		adapter = new TextAdapter(lists, this);
-		lv.setAdapter(adapter);
-		ListData listData;
-		listData = new ListData(getRandomWelcomeTips(), ListData.RECEIVER,
-				getTime());
-		lists.add(listData);
-	}
+		lv_chat_list = (ListView) findViewById(R.id.lv_chat_list);
+		ed_send = (EditText) findViewById(R.id.ed_send);
+		btn_send = (Button) findViewById(R.id.btn_send);
+		lv_chat_list.setDivider(null);
 
-	/** 用户第一次进入，随机获取欢迎语 */
-	private String getRandomWelcomeTips() {
-		String welcome_tip = null;
-		welcome_array = this.getResources()
-				.getStringArray(R.array.welcome_tips);
-		int index = (int) (Math.random() * (welcome_array.length - 1));
-		welcome_tip = welcome_array[index];
-		return welcome_tip;
+		//设置适配器
+		adapter = new ChatListAdapter(this,mList);
+		lv_chat_list.setAdapter(adapter);
+
+		//设置发送按钮监听
+		btn_send.setOnClickListener(this);
+
+		//设置欢迎语
+		addlefttext("你好呀！");
 	}
 
 	@Override
-	public void getDataUrl(String data) {
-		parseText(data);
+	public void onClick(View view) {
+		switch (view.getId()){
+			case R.id.btn_send:
+				String message = ed_send.getText().toString().trim();
+				if(!TextUtils.isEmpty(message)){
+					//点击发送后清空输入框
+					ed_send.setText("");
+					addrighttext(message);
+					//定义URL
+					//图灵机器人接口地址：http://www.tuling123.com/openapi/api
+					//key=后接在图灵官网申请到的apikey
+					//info后接输入的内容
+					String url ="http://www.tuling123.com/openapi/api?"+
+							"key="+"dc8443ef16bf4c00ab44c16f352edc21"+"&info="+message;
+					//RxVolley将信息发出（添加RxVolley依赖，
+					// 在app的build.gradle的ependencies中添加compile 'com.kymjs.rxvolley:rxvolley:1.1.4'）
+					RxVolley.get(url, new HttpCallback() {
+						@Override
+						public void onSuccess(String t) {
+							//解析返回的JSON数据
+							pasingJson(t);
+						}
+					});
+				}else{
+					return;
+				}
+				break;
+		}
 	}
 
-	public void parseText(String str) {
+	private void pasingJson(String message){
+		JSONObject jsonObject = null;
 		try {
-			JSONObject jb = new JSONObject(str);
-			// System.out.println(jb.getString("code"));
-			// System.out.println(jb.getString("text"));
-			ListData listData;
-			listData = new ListData(jb.getString("text"), ListData.RECEIVER,
-					getTime());
-			lists.add(listData);
-			adapter.notifyDataSetChanged();
+			jsonObject = new JSONObject(message);
+			//通过key（text）获取value
+			String text = jsonObject.getString("text");
+			addlefttext(text);
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
 	}
 
-	@Override
-	public void onClick(View v) {
-		getTime();
-		content_str = sendtext.getText().toString();
-		sendtext.setText("");
-		// 去掉空格
-		String dropk = content_str.replace(" ", "");
-		// 去掉回车
-		String droph = dropk.replace("\n", "");
-		ListData listData;
-		listData = new ListData(content_str, ListData.SEND, getTime());
-		lists.add(listData);
-		if (lists.size() > 30) {
-			for (int i = 0; i < lists.size(); i++) {
-				// 移除数据
-				lists.remove(i);
-			}
-		}
+	//添加右侧消息
+	private void addrighttext(String message) {
+		ChatData data = new ChatData();
+		data.setType(ChatListAdapter.chat_right);
+		data.setText(message);
+		mList.add(data);
+		//通知adapter刷新页面
 		adapter.notifyDataSetChanged();
-		httpData = (HttpData) new HttpData(
-				"http://www.tuling123.com/openapi/api?key=dc8443ef16bf4c00ab44c16f352edc21="
-						+ droph, this).execute();
+		lv_chat_list.setSelection(lv_chat_list.getBottom());
+
 	}
 
-	/** 获取时间 */
-	private String getTime() {
-		currentTime = System.currentTimeMillis();
-		SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
-		Date curDate = new Date();
-		String str = format.format(curDate);
-		// 如果超过5分钟.
-		if (currentTime - oldTime >= 5 * 60 * 1000) {
-			oldTime = currentTime;
-			return str;
-		} else {
-			return "";
-		}
+	//添加左侧消息
+	private void addlefttext(String message) {
+		ChatData data = new ChatData();
+		data.setType(ChatListAdapter.chat_left);
+		data.setText(message);
+		mList.add(data);
+		adapter.notifyDataSetChanged();
+		lv_chat_list.setSelection(lv_chat_list.getBottom());
 
 	}
 }
