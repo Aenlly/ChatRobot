@@ -8,7 +8,7 @@
     android:padding="10dp">
 
     <ImageView
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/m"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -17,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
+        android:background="@drawable/aio_friend_bg_nor_11"
         android:gravity="center"
         />
 
