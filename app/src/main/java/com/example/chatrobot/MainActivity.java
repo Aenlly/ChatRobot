@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
 import android.widget.Button;
@@ -78,6 +79,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 						@Override
 						public void onSuccess(String t) {
 							//解析返回的JSON数据
+							Log.i("my", "onSuccess: "+t);
 							pasingJson(t);
 						}
 					});
@@ -111,7 +113,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
 		lv_chat_list.setSelection(lv_chat_list.getBottom());
 
 	}
-
 	//添加左侧消息
 	private void addlefttext(String message) {
 		ChatData data = new ChatData();
