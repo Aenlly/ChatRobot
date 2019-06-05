@@ -38,7 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:gravity="center" />
+            android:textSize="30sp"
+            android:gravity="start" />
 
         <Button
             android:background="@drawable/btnborder"
@@ -49,8 +50,8 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/chat_input_message"
             android:text="发送"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textColor="#000000"
+            android:textSize="25sp" />
     </RelativeLayout>
 
     <!-- 中间 -->
@@ -61,6 +62,8 @@
         android:layout_height="match_parent"
         android:layout_above="@id/chat_bottom"
         android:layout_below="@id/chat_top"
+        android:stackFromBottom="false"
+        android:transcriptMode="alwaysScroll"
         android:divider="@null"
         android:dividerHeight="3dp" >
     </ListView>

@@ -1,5 +1,6 @@
 package com.example.bomberman;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
@@ -28,11 +29,14 @@ public class ChatActivity extends Activity {
     private Button chat_send;
     private ChatMessageAdapter chatAdapter;
     private ChatMessage chatMessage = null;
+    static String key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Intent intent=getIntent();
+        key=intent.getStringExtra("key");
         setContentView(R.layout.activity_main);
         initView();
         initListener();

@@ -1,5 +1,9 @@
 package com.example.bomberman;
 
+import android.content.Intent;
+import android.util.Log;
+import android.widget.EditText;
+
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
@@ -11,12 +15,14 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Date;
 
+import static com.example.bomberman.ChatActivity.key;
+
 /**
  * author:Created by ZhangPengFei.
  * data: 2017/12/28
  * http工具类
  */
-public class HttpUtils {
+public class HttpUtils{
 
     /**
      * 发送消息到服务器
@@ -101,9 +107,11 @@ public class HttpUtils {
      */
     private static String setParmat(String message) {
         String url = "";
+
         try {
-            url = Config.URL_KEY + "?" + "key=" + Config.APP_KEY + "&info="
+            url = Config.URL_KEY + "?" + "key=" + key + "&info="
                     + URLEncoder.encode(message, "UTF-8");
+            Log.i("my",url);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
