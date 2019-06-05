@@ -1,0 +1,4 @@
+#Wed Jun 05 11:16:08 CST 2019
+base.0=F\:\\Androidxiangmu\\ChatRobot\\bomberman\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+path.0=classes.dex
+renamed.0=classes.dex
