@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\c103da69784fef4e3a01fc88c1147eb1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\1ec609e031cc9622e2bb819691d40d64\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\e3d2bb67baf432e63a3667371ad1293d\AndroidManifest.xml:17:1-22:12
@@ -31,20 +31,20 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\ÌÆÄêÍú\.gradle\cach
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\d3480fc806798cbeb9d5b4d1cc1ab56d\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\93ecda76f4bc0db28eabc688f33e2c7a\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\5c5a687c53dbdbc556f9735d5f6f46aa\AndroidManifest.xml:17:1-22:12
-INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml
 		INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:2:11-69
@@ -53,7 +53,7 @@ ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:5:
 	android:name
 		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:8:5-25:19
+ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:8:5-26:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\1ec609e031cc9622e2bb819691d40d64\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\1ec609e031cc9622e2bb819691d40d64\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\095a5edc2c2e1f53f6a9a17f4c4e8809\AndroidManifest.xml:22:5-94
@@ -63,35 +63,37 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\ÌÆÄêÍú\.gr
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\ÌÆÄêÍú\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\095a5edc2c2e1f53f6a9a17f4c4e8809\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:13:9-35
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:11:9-41
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:12:9-54
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:10:9-43
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:9:9-35
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:14:9-40
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:15:9-40
+	android:usesCleartextTraffic
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:9:9-44
 activity#com.example.bomberman.ChatActivity
-ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:15:9-17:20
+ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:16:9-18:20
 	android:name
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:15:19-47
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:16:19-47
 activity#com.example.bomberman.LayoutKeyActivity
-ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:18:9-24:20
+ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:19:9-25:20
 	android:name
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:18:19-52
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:19:19-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:20:17-69
+ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:20:25-66
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:22:17-77
+ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:22:27-74
+		ADDED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml:23:27-74
 uses-sdk
 INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\Androidxiangmu\ChatRobot\bomberman\src\main\AndroidManifest.xml

@@ -48,6 +48,7 @@ public class LayoutKeyActivity extends AppCompatActivity {
                 } else {
                     key = "dc8443ef16bf4c00ab44c16f352edc21";
                     intent = new Intent(LayoutKeyActivity.this, ChatActivity.class);
+                    intent.putExtra("key", key);
                     startActivity(intent);
                 }
             }
