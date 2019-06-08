@@ -3,7 +3,6 @@
     package="com.example.bomberman">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <!-- 网络权限 -->
     <application
         android:usesCleartextTraffic="true"

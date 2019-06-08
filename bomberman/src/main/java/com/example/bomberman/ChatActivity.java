@@ -35,9 +35,8 @@ public class ChatActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        Intent intent=getIntent();
-        key=intent.getStringExtra("key");
         setContentView(R.layout.activity_main);
+
         initView();
         initListener();
         initData();
@@ -77,6 +76,10 @@ public class ChatActivity extends Activity {
 
         // 2.自己输入的内容也是一条记录，记录刷新
         ChatMessage sendChatMessage = new ChatMessage();
+
+        Intent intent=getIntent();
+        key=intent.getStringExtra("key");
+
         sendChatMessage.setMessage(send_message);
         sendChatMessage.setData(new Date());
         sendChatMessage.setType(ChatMessage.Type.OUTCOUNT);

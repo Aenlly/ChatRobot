@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Jun 06 17:11:07 CST 2019
+#Thu Jun 06 17:57:52 CST 2019
 0.baseType=DIRECTORY
 0.base=F\:\\Androidxiangmu\\ChatRobot\\bomberman\\build\\intermediates\\transforms\\dexMerger\\release\\0
 0.path=classes.dex

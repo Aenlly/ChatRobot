@@ -40,12 +40,12 @@ public class LayoutKeyActivity extends AppCompatActivity {
         btn_mr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (btn_mr.getText().toString().equals("确认")) {
+                if (btn_mr.getText().toString().equals("确定")) {
                     key = sr.getText().toString().trim();
                     intent = new Intent(LayoutKeyActivity.this, ChatActivity.class);
                     intent.putExtra("key", key);
                     startActivity(intent);
-                } else {
+                } else if (btn_mr.getText().toString().equals("默认key连接")){
                     key = "dc8443ef16bf4c00ab44c16f352edc21";
                     intent = new Intent(LayoutKeyActivity.this, ChatActivity.class);
                     intent.putExtra("key", key);
